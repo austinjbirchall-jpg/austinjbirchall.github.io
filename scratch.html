@@ -8,57 +8,92 @@
     <!-- Custom stylesheet required by the project -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- A tiny bit of extra page-specific styling -->
+    <!-- Page-specific black/white styling to match resume -->
     <style>
-        .scratch-wrapper {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px 25px;
-            border-radius: 8px;
+        body {
+            background: #f5f5f5;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #111;
+            margin: 0;
         }
 
-        .scratch-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .scratch-header h1 {
-            margin-bottom: 5px;
-        }
-
-        .scratch-section {
-            margin-bottom: 30px;
-        }
-
-        .scratch-section h2 {
-            margin-bottom: 8px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 4px;
-        }
-
-        .scratch-image {
+        nav {
+            background: #000;
+            padding: 12px;
             text-align: center;
         }
 
-        .scratch-image img {
-            max-width: 220px;
-            border-radius: 8px;
-        }
-
-        /* Make sure links look clean on this page */
-        a {
+        nav a {
+            color: #fff;
+            margin: 0 10px;
             text-decoration: none;
         }
 
-        a:hover {
+        nav a:hover {
             text-decoration: underline;
+        }
+
+        .scratch-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 28px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h2 {
+            margin-bottom: 6px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .scratch-image img {
+            width: 220px;
+            border-radius: 12px;
+            display: block;
+            margin: auto;
+        }
+
+        /* Sidebar divs required for stylesheet credit */
+        .leftvalue {
+            position: fixed;
+            left: 8px;
+            top: 110px;
+            width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .rightvalue {
+            position: fixed;
+            right: 8px;
+            top: 110px;
+            width: 180px;
+            font-size: 0.9rem;
+        }
+
+        .mainbody {
+            padding-top: 20px;
+        }
+
+        a {
+            color: #111;
+        }
+
+        a:hover {
+            color: #000;
         }
     </style>
 </head>
+
 <body id="top">
 
-<!-- NAVIGATION to all major pages -->
+<!-- NAV -->
 <nav>
     <a href="index.html">Home</a> |
     <a href="resume.html">Resume</a> |
@@ -68,97 +103,91 @@
     <a href="webapp.html">Web App</a>
 </nav>
 
-<!-- Use the three divs that are styled in styles.css: leftvalue, mainbody, rightvalue -->
+<!-- LEFT SIDE LINKS (div for CSS credit) -->
 <div class="leftvalue">
-    <h3>Quick Links</h3>
+    <strong>Quick Links</strong><br>
     <a href="#hobby">Hobby</a><br>
     <a href="#lists">Lists</a><br>
-    <a href="#video">YouTube Video</a><br>
-    <a href="#tableau">Tableau Viz</a><br>
-    <a href="#top">Back to Top</a><br><br>
-
-    <!-- Required: link from scratch page to web app -->
+    <a href="#video">Video</a><br>
+    <a href="#tableau">Tableau</a><br>
+    <br>
     <strong>Web App:</strong><br>
-    <a href="webapp.html">Insurance Premium Estimator</a>
+    <a href="webapp.html">Estimator</a><br><br>
+    <a href="#top">Back to Top</a>
 </div>
 
+<!-- RIGHT SIDE NOTES (div for CSS credit) -->
 <div class="rightvalue">
-    <h3>On This Page</h3>
-    <p>This page was built from scratch to demonstrate:</p>
+    <strong>Requirements Shown:</strong>
     <ul>
-        <li>Custom CSS from <code>styles.css</code></li>
-        <li>Background image or color</li>
-        <li>Nested lists</li>
-        <li>Embedded YouTube</li>
-        <li>Interactive Tableau</li>
-        <li>On-page anchors</li>
+        <li>Custom CSS</li>
+        <li>Nested Lists</li>
+        <li>YouTube Embed</li>
+        <li>Tableau Embed</li>
+        <li>Anchors</li>
+        <li>Image</li>
     </ul>
 </div>
 
+<!-- MAIN CONTENT (div for CSS credit) -->
 <div class="mainbody">
-    <div class="scratch-wrapper">
+    <div class="scratch-container">
 
-        <!-- HEADER -->
-        <header class="scratch-header">
-            <h1>From-Scratch HTML &amp; CSS Page</h1>
-            <p>A page about my interests and tools, built completely from a blank HTML file.</p>
-        </header>
+        <h1>From-Scratch HTML &amp; CSS Page</h1>
+        <p>This page demonstrates hand-written HTML, CSS, and embedding techniques.</p>
 
-        <!-- HOBBY / PASSION SECTION -->
-        <section id="hobby" class="scratch-section">
-            <h2>Endurance, Skiing, and Service</h2>
+        <!-- SECTION 1 -->
+        <section id="hobby" class="section">
+            <h2>Hobby & Interests</h2>
             <p>
-                I love pushing myself through endurance sports, spending time skiing in the mountains,
-                and serving people through my work and community. These three areas keep me motivated
-                and balanced.
+                I enjoy endurance training, skiing in the mountains, and helping people through meaningful service. 
+                These interests keep me motivated and grounded.
             </p>
         </section>
 
-        <!-- IMAGE SECTION (non-Bootstrap image) -->
-        <section class="scratch-section scratch-image">
-            <h2>My Own Image</h2>
-            <p>This image is hosted in my own project, not from a Bootstrap theme.</p>
+        <!-- IMAGE -->
+        <section class="section scratch-image">
+            <h2>My Image (Non-Bootstrap)</h2>
             <img src="images/B167.JPG" alt="Austin Birchall">
         </section>
 
-        <!-- ORDERED LIST WITH NESTED UNORDERED LIST -->
-        <section id="lists" class="scratch-section">
-            <h2>Goals and Interests (Nested Lists)</h2>
-            <p>Here is an ordered list with unordered lists inside it (required by the project):</p>
+        <!-- LISTS -->
+        <section id="lists" class="section">
+            <h2>Goals & Values (Nested Lists)</h2>
 
             <ol>
-                <li>Health &amp; Fitness
+                <li>Health & Fitness
                     <ul>
-                        <li>Run longer distances</li>
-                        <li>Improve overall strength</li>
-                        <li>Stay consistent with training</li>
+                        <li>Run consistent weekly mileage</li>
+                        <li>Strengthen core/lower body</li>
+                        <li>Stay disciplined in recovery</li>
                     </ul>
                 </li>
-                <li>Career &amp; Skills
+
+                <li>Career Development
                     <ul>
-                        <li>Develop stronger sales and communication skills</li>
-                        <li>Learn more about financial planning tools</li>
-                        <li>Continue improving my web and tech skills</li>
+                        <li>Advance in financial services</li>
+                        <li>Improve sales mastery</li>
+                        <li>Grow technical skill sets</li>
                     </ul>
                 </li>
-                <li>Family &amp; Faith
+
+                <li>Family & Service
                     <ul>
-                        <li>Be present with my family</li>
-                        <li>Look for opportunities to serve</li>
-                        <li>Stay grounded in my values</li>
+                        <li>Prioritize relationships</li>
+                        <li>Serve consistently</li>
+                        <li>Live values-driven</li>
                     </ul>
                 </li>
             </ol>
         </section>
 
-        <!-- YOUTUBE EMBED -->
-        <section id="video" class="scratch-section">
-            <h2>Favorite YouTube Video</h2>
-            <p>Here is a YouTube video I enjoy watching:</p>
+        <!-- YOUTUBE VIDEO -->
+        <section id="video" class="section">
+            <h2>Favorite Video</h2>
 
-            <!-- Replace VIDEO_ID with your real YouTube video ID -->
             <iframe width="560" height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/d33C8IE7WnQ?si=WOFxhv22Uc99kRVK"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -166,10 +195,9 @@
             </iframe>
         </section>
 
-        <!-- TABLEAU EMBED -->
-        <section id="tableau" class="scratch-section">
-            <h2>Interactive Tableau Graph</h2>
-            <p>Below is an interactive Tableau visualization embedded on this page.</p>
+        <!-- TABLEAU -->
+        <section id="tableau" class="section">
+            <h2>Interactive Tableau Visualization</h2>
 
             <div class='tableauPlaceholder' id='viz17123456789' style='position: relative'>
                 <noscript>
@@ -202,17 +230,15 @@
                 var vizElement = divElement.getElementsByTagName('object')[0];
                 vizElement.style.width = '100%';
                 vizElement.style.height = '600px';
-
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
             </script>
         </section>
 
-        <!-- BACK TO TOP ANCHOR -->
-        <section class="scratch-section">
-            <p><a href="#top">Back to Top</a></p>
-        </section>
+        <!-- BACK TO TOP -->
+        <p><a href="#top">Back to Top</a></p>
+
     </div>
 </div>
 
