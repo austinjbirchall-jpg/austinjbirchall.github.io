@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Estimator</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .app-container {
+            background: rgba(255,255,255,0.85);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 30px auto;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #1f1b6c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="resume.html">Resume</a> |
+    <a href="aboutme.html">About Me</a> |
+    <a href="bootstrap.html">Bootstrap Page</a> |
+    <a href="scratch.html">Scratch Page</a> |
+    <a href="webapp.html">Web App</a>
+</nav>
+
+<h1 style="text-align:center;">Insurance Premium Estimator</h1>
+
+<div class="app-container">
+    <label>Enter Your Age:</label>
+    <input type="number" id="age" placeholder="e.g., 30">
+
+    <label>Desired Coverage Amount ($):</label>
+    <input type="number" id="coverage" placeholder="e.g., 250000">
+
+    <button onclick="estimatePremium()">Calculate Estimate</button>
+
+    <h2 id="result"></h2>
+</div>
+
+<script>
+function estimatePremium() {
+    let age = Number(document.getElementById("age").value);
+    let coverage = Number(document.getElementById("coverage").value);
+
+    if (age <= 0 || coverage <= 0) {
+        document.getElementById("result").innerText = "Please enter valid numbers.";
+        return;
+    }
+
+    // Example simple formula:
+    // Base cost rises with age + proportional to coverage
+    let premium = (coverage * 0.0008) + (age * 2.7);
+
+    document.getElementById("result").innerText =
+        "Estimated Monthly Premium: $" + premium.toFixed(2);
+}
+</script>
+
+</body>
+</html>
