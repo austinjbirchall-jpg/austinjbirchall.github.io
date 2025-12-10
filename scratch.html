@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scratch Page - Austin Birchall</title>
 
-    <!-- Custom stylesheet required by the project -->
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Page-specific black/white styling to match resume -->
     <style>
         body {
             background: #f5f5f5;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: #111;
+            color: #000 !important; /* FORCE all body text to be black */
             margin: 0;
         }
 
         nav {
-            background: #000;
+            background: #000; /* black navbar */
             padding: 12px;
             text-align: center;
         }
 
         nav a {
-            color: #fff;
+            color: #fff !important; /* navbar links MUST stay white */
             margin: 0 10px;
             text-decoration: none;
         }
@@ -40,10 +39,12 @@
             padding: 28px;
             border-radius: 8px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            color: #000 !important; /* ensure text inside container is black */
         }
 
         .section {
             margin-bottom: 32px;
+            color: #000 !important;
         }
 
         .section h2 {
@@ -51,6 +52,7 @@
             border-bottom: 1px solid #ccc;
             padding-bottom: 4px;
             font-weight: 600;
+            color: #000 !important; /* section titles black */
         }
 
         .scratch-image img {
@@ -67,6 +69,7 @@
             top: 110px;
             width: 150px;
             font-size: 0.9rem;
+            color: #000 !important; /* force sidebar text to black */
         }
 
         .rightvalue {
@@ -75,18 +78,21 @@
             top: 110px;
             width: 180px;
             font-size: 0.9rem;
+            color: #000 !important; 
         }
 
         .mainbody {
             padding-top: 20px;
+            color: #000 !important;
         }
 
         a {
-            color: #111;
+            color: #000 !important; /* make ALL links black */
         }
 
         a:hover {
-            color: #000;
+            color: #000 !important; /* no change on hover; stays black */
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -103,21 +109,21 @@
     <a href="webapp.html">Web App</a>
 </nav>
 
-<!-- LEFT SIDE LINKS (div for CSS credit) -->
+<!-- LEFT SIDE LINKS -->
 <div class="leftvalue">
     <strong>Quick Links</strong><br>
     <a href="#hobby">Hobby</a><br>
     <a href="#lists">Lists</a><br>
     <a href="#video">Video</a><br>
-    <a href="#tableau">Tableau</a><br>
-    <br>
+    <a href="#tableau">Tableau</a><br><br>
     <strong>Web App:</strong><br>
     <a href="webapp.html">Estimator</a><br><br>
     <a href="#top">Back to Top</a>
 </div>
 
+<!-- RIGHT SIDE -->
 <div class="rightvalue">
-    <strong>Requirements: </strong>
+    <strong>Requirements:</strong>
     <ul>
         <li>Custom CSS</li>
         <li>Nested Lists</li>
@@ -128,7 +134,7 @@
     </ul>
 </div>
 
-<!-- MAIN CONTENT (div for CSS credit) -->
+<!-- MAIN CONTENT -->
 <div class="mainbody">
     <div class="scratch-container">
 
@@ -207,7 +213,7 @@
                     </a>
                 </noscript>
 
-                <object class='tableauViz' style='display: none;'>
+                <object class='tableauViz' style='display:none;'>
                     <param name='host_url' value='https://public.tableau.com/' />
                     <param name='embed_code_version' value='3' />
                     <param name='site_root' value='' />
