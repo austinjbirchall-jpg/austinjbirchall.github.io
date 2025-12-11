@@ -70,8 +70,6 @@ function estimatePremium() {
         return;
     }
 
-    // Example simple formula:
-    // Base cost rises with age + proportional to coverage
     let premium = (coverage * 0.0008) + (age * 2.7);
 
     document.getElementById("result").innerText =
